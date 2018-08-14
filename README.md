@@ -2,13 +2,14 @@
 implementation of the proper orthogonal decomposition
 
 input:
-    in commend line:
-    N   the number of snapshots
-    M   the number of modes
 
-    files:
-    snapshots
-    averaged field
+in commend line:
+N   the number of snapshots
+M   the number of modes
+
+files:
+snapshots
+averaged field
 
 data files should be in csv form
 
