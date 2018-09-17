@@ -23,6 +23,7 @@ file_suffix = 'csv'
 filename = 'POD.dat'
 
 var_names = ['U0', 'U1', 'U2']
+var_str = ''.join(var_names)
 
 # load the average data first
 data_ave = np.genfromtxt('clip_ave.csv',
@@ -112,7 +113,9 @@ for j in range(mode_number):
 
 # save the modes
 for j in range(mode_number):
-    file_name = '.'.join(['POD_mode','{:d}'.format(j),file_suffix])
+    file_name = '.'.join(['POD_mode_{}'.format(var_str),
+                          '{:d}'.format(j),
+                          file_suffix])
     np.savetxt(file_name,
                modes[:,j].reshape(data_ave.size,len(var_names)),
                fmt='%12.6e',
@@ -128,7 +131,7 @@ var_names = [ 'V{:d}'.format(i) for i in range(mode_number) ]
 var_names.insert(0, 'sigma')
 var_names.insert(0, 'eigval')
 
-np.savetxt('POD_coef.csv',
+np.savetxt('POD_coef_{}.csv'.format(var_str),
            data,
            fmt = '%12.6e',
            delimiter = ',',
