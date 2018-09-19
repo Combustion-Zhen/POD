@@ -14,14 +14,26 @@ num_snapshots = data.size
 
 # figure and axes parameters
 # total width is fixed, for one column plot
-plot_width    = 9.0
-margin_left   = 1.5
+
+## for manuscript
+#plot_width    = 9.0
+#margin_left   = 1.5
+#margin_right  = 0.1
+#margin_bottom = 1.2
+#margin_top    = 0.2
+#space_width   = 1.0
+#space_height  = 0.5
+#ftsize        = 9
+
+# for slides
+plot_width    = 12.0
+margin_left   = 2.5
 margin_right  = 0.1
-margin_bottom = 1.2
+margin_bottom = 1.6
 margin_top    = 0.2
-space_width   = 3.5
+space_width   = 1.0
 space_height  = 0.5
-ftsize        = 9
+ftsize        = 20
 
 font = {'family':'serif',
         'weight':'normal',
@@ -57,10 +69,10 @@ ax.plot(np.arange(num_snapshots)+1, data['eigval']/data['eigval'].sum(),
 
 ax.set_xscale('log')
 ax.set_xlim(1,num_snapshots)
-ax.set_ylim(0,0.1)
+ax.set_ylim(0,0.17)
 
 ax.set_xlabel(r'$\mathrm{mode\;number}\;i$')
-ax.set_ylabel(r'$\lambda_i/\Sigma\lambda_i$')
+ax.set_ylabel(r'$\lambda_i/\Sigma\lambda_j$')
 
 fig.subplots_adjust(
         left = margin_left/plot_width,
@@ -72,4 +84,4 @@ fig.subplots_adjust(
         )
 
 fig.savefig('fig_POD_lambda.eps')
-fig.savefig('fig_POD_lambda.pdf')
+fig.savefig('fig_POD_lambda.png')

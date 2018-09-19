@@ -12,14 +12,26 @@ def cm2inch(*tupl):
 
 # figure and axes parameters
 # total width is fixed, for one column plot
-plot_width    = 9.0
-margin_left   = 1.5
+
+## for manuscript
+#plot_width    = 9.0
+#margin_left   = 1.5
+#margin_right  = 0.1
+#margin_bottom = 1.2
+#margin_top    = 0.2
+#space_width   = 1.0
+#space_height  = 0.5
+#ftsize        = 9
+
+# for slides
+plot_width    = 10.0
+margin_left   = 2.5
 margin_right  = 0.1
-margin_bottom = 1.2
+margin_bottom = 1.8
 margin_top    = 0.2
-space_width   = 3.5
+space_width   = 1.0
 space_height  = 0.5
-ftsize        = 9
+ftsize        = 20
 
 font = {'family':'serif',
         'weight':'normal',
@@ -86,6 +98,7 @@ for i in range(num_mode):
             hspace = space_height/subplot_height
             )
 
-    fig.savefig('fig_POD_PSD_mode.{:d}.eps'.format(i))
+    fig.savefig('fig_POD_PSD_mode{:d}.eps'.format(i))
+    fig.savefig('fig_POD_PSD_mode{:d}.png'.format(i))
 
     plt.close()
