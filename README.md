@@ -23,3 +23,15 @@ data to be employed for POD is specified in var\_names
 output:
     POD_coef.csv    containing eigenvalues and first M mode eigenvectors
     POD_mode.csv
+
+citation:
+```
+@inproceedings{Lu2018
+author = {{Lu}, Zhen and {Elbaz}, Ayman M. and {Hernandez Perez}, Francisco E. and {Roberts}, William L. and {Im}, Hong G.},
+        title = "{Large Eddy Simulations of the Vortex-Flame Interaction in a Turbulent Swirl Burner}",
+    booktitle = {APS Division of Fluid Dynamics Meeting},
+         year = "2018",
+        month = "November",
+          eid = {Q2.005}
+}
+```
